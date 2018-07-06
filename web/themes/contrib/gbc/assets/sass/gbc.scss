@@ -1,0 +1,74 @@
+// Custom css goes here
+@import "style";
+
+// =============================================  //
+// set body height to 100%
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  height:100%;
+  margin-bottom:100px;
+  padding-bottom:10px;
+}
+// main
+div.main-container.container-fluid {margin:0 2em 0 2em;}
+
+// panels style
+.panels {box-shadow:0 1px 1px rgba(0,0,0,.05);}
+
+// Centering
+// div
+.center-div
+{
+     margin: 0 auto;
+     width: 100px;
+}
+// carousel pics
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  margin: 0 auto;
+}
+// fonts
+* {
+   font-size: 16px;
+   line-height: 1.75;
+}
+// navbar
+.navbar {border-radius:0px;}
+.navbar-nav {float:right; margin: 1.5em 3em 0 0;}
+.navbar-btn {margin-left:2em;}
+
+// About GBC add some style
+div.about.row {margin:1.75em;}
+// homepage add some style
+div.homepage {margin: 0 0 1.25em 0}
+.we-exist {max-width:70%; margin:0 auto; margin-top:5px;}
+// Heading overrides
+h1,h2,h3,h4 {color:#194286}
+
+// responsive Google Map
+.google-maps {
+        position: relative;
+        padding-bottom: 65%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+    }
+    .google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+// footer
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  min-height: 60px;
+  background-color: #333;
+}
+.nav > li > a:hover, .nav > li > a:focus {background-color:rgba(0,0,0,0);}
