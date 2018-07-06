@@ -12,6 +12,8 @@ body {
   margin-bottom:100px;
   padding-bottom:10px;
 }
+// fonts
+$font-size-base: 16px;
 // main
 div.main-container.container-fluid {margin:0 2em 0 2em;}
 @media screen and (max-width: 600px) {
@@ -33,10 +35,10 @@ div.main-container.container-fluid {margin:0 2em 0 2em;}
   margin: 0 auto;
 }
 // fonts
-* {
-   font-size: 16px;
-   line-height: 1.75;
-}
+//* {
+//   font-size: 16px;
+//   line-height: 1.75;
+//}
 // navbar
 .navbar {border-radius:0px;}
 .navbar-nav {float:right; margin: 1.5em 3em 0 0;}
