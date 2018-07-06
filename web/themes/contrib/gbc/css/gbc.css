@@ -7363,63 +7363,67 @@ body {
 div.main-container.container-fluid {
   margin: 0 2em 0 2em; }
 
-/* line 19, ../assets/sass/gbc.scss */
+@media screen and (max-width: 600px) {
+  /* line 18, ../assets/sass/gbc.scss */
+  div.main-container.container-fluid {
+    margin: 0 .25em 0 .25em; } }
+/* line 22, ../assets/sass/gbc.scss */
 .panels {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); }
 
-/* line 23, ../assets/sass/gbc.scss */
+/* line 26, ../assets/sass/gbc.scss */
 .center-div {
   margin: 0 auto;
   width: 100px; }
 
-/* line 29, ../assets/sass/gbc.scss */
+/* line 32, ../assets/sass/gbc.scss */
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
   margin: 0 auto; }
 
-/* line 33, ../assets/sass/gbc.scss */
+/* line 36, ../assets/sass/gbc.scss */
 * {
   font-size: 16px;
   line-height: 1.75; }
 
-/* line 38, ../assets/sass/gbc.scss */
+/* line 41, ../assets/sass/gbc.scss */
 .navbar {
   border-radius: 0px; }
 
-/* line 39, ../assets/sass/gbc.scss */
+/* line 42, ../assets/sass/gbc.scss */
 .navbar-nav {
   float: right;
   margin: 1.5em 3em 0 0; }
 
-/* line 40, ../assets/sass/gbc.scss */
+/* line 43, ../assets/sass/gbc.scss */
 .navbar-btn {
   margin-left: 2em; }
 
-/* line 43, ../assets/sass/gbc.scss */
+/* line 46, ../assets/sass/gbc.scss */
 div.about.row {
   margin: 1.75em; }
 
-/* line 45, ../assets/sass/gbc.scss */
+/* line 48, ../assets/sass/gbc.scss */
 div.homepage {
   margin: 0 0 1.25em 0; }
 
-/* line 46, ../assets/sass/gbc.scss */
+/* line 49, ../assets/sass/gbc.scss */
 .we-exist {
   max-width: 70%;
   margin: 0 auto;
   margin-top: 5px; }
 
-/* line 48, ../assets/sass/gbc.scss */
+/* line 51, ../assets/sass/gbc.scss */
 h1, h2, h3, h4 {
   color: #194286; }
 
-/* line 51, ../assets/sass/gbc.scss */
+/* line 54, ../assets/sass/gbc.scss */
 .google-maps {
   position: relative;
   padding-bottom: 65%;
   height: 0;
   overflow: hidden; }
 
-/* line 57, ../assets/sass/gbc.scss */
+/* line 60, ../assets/sass/gbc.scss */
 .google-maps iframe {
   position: absolute;
   top: 0;
@@ -7427,7 +7431,7 @@ h1, h2, h3, h4 {
   width: 100% !important;
   height: 100% !important; }
 
-/* line 66, ../assets/sass/gbc.scss */
+/* line 69, ../assets/sass/gbc.scss */
 .footer {
   position: absolute;
   bottom: 0;
@@ -7436,6 +7440,6 @@ h1, h2, h3, h4 {
   min-height: 60px;
   background-color: #333; }
 
-/* line 74, ../assets/sass/gbc.scss */
+/* line 77, ../assets/sass/gbc.scss */
 .nav > li > a:hover, .nav > li > a:focus {
   background-color: transparent; }
