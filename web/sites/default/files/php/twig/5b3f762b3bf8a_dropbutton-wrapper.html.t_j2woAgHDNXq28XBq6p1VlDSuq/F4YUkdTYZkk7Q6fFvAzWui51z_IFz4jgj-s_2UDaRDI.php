@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/classy/templates/field/file-link.html.twig */
-class __TwigTemplate_5f552c34bcd91246564d3dffa1ec80311afc84fa02f738a9b59879f1ee863904 extends Twig_Template
+/* core/themes/classy/templates/form/dropbutton-wrapper.html.twig */
+class __TwigTemplate_fcee0e00aa088841204125ffd2cc9667515fa16923000387ee805056191438bc extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -15,15 +15,15 @@ class __TwigTemplate_5f552c34bcd91246564d3dffa1ec80311afc84fa02f738a9b59879f1ee8
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array();
+        $tags = array("if" => 12, "spaceless" => 13);
         $filters = array();
-        $functions = array("attach_library" => 14);
+        $functions = array();
 
         try {
             $this->env->getExtension('Twig_Extension_Sandbox')->checkSecurity(
+                array('if', 'spaceless'),
                 array(),
-                array(),
-                array('attach_library')
+                array()
             );
         } catch (Twig_Sandbox_SecurityError $e) {
             $e->setSourceContext($this->getSourceContext());
@@ -39,23 +39,28 @@ class __TwigTemplate_5f552c34bcd91246564d3dffa1ec80311afc84fa02f738a9b59879f1ee8
             throw $e;
         }
 
-        // line 14
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->env->getExtension('Drupal\Core\Template\TwigExtension')->attachLibrary("classy/file"), "html", null, true));
-        echo "
-<span";
-        // line 15
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["attributes"] ?? null), "html", null, true));
-        echo ">";
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["icon"] ?? null), "html", null, true));
-        echo " ";
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["link"] ?? null), "html", null, true));
-        echo "</span>
-";
+        // line 12
+        if (($context["children"] ?? null)) {
+            // line 13
+            echo "  ";
+            ob_start();
+            // line 14
+            echo "    <div class=\"dropbutton-wrapper\">
+      <div class=\"dropbutton-widget\">
+        ";
+            // line 16
+            echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["children"] ?? null), "html", null, true));
+            echo "
+      </div>
+    </div>
+  ";
+            echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
+        }
     }
 
     public function getTemplateName()
     {
-        return "core/themes/classy/templates/field/file-link.html.twig";
+        return "core/themes/classy/templates/form/dropbutton-wrapper.html.twig";
     }
 
     public function isTraitable()
@@ -65,7 +70,7 @@ class __TwigTemplate_5f552c34bcd91246564d3dffa1ec80311afc84fa02f738a9b59879f1ee8
 
     public function getDebugInfo()
     {
-        return array (  47 => 15,  43 => 14,);
+        return array (  52 => 16,  48 => 14,  45 => 13,  43 => 12,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -78,6 +83,6 @@ class __TwigTemplate_5f552c34bcd91246564d3dffa1ec80311afc84fa02f738a9b59879f1ee8
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "core/themes/classy/templates/field/file-link.html.twig", "/Users/al/sites/gbc/web/core/themes/classy/templates/field/file-link.html.twig");
+        return new Twig_Source("", "core/themes/classy/templates/form/dropbutton-wrapper.html.twig", "/Users/al/sites/gbc/web/core/themes/classy/templates/form/dropbutton-wrapper.html.twig");
     }
 }

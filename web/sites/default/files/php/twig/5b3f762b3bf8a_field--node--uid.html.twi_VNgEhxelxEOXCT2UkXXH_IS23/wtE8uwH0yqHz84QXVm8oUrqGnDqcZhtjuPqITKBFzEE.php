@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/classy/templates/content-edit/filter-guidelines.html.twig */
-class __TwigTemplate_4c88e5f596d2adee1e269c9ba0f7b51f208b17eaad505d125025d0b346e1feb8 extends Twig_Template
+/* core/modules/node/templates/field--node--uid.html.twig */
+class __TwigTemplate_f10f4c11905c3f2d93d3e842f1bc93f24fa35e05a1939c045c5c52ffe5bb5cc6 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -15,13 +15,13 @@ class __TwigTemplate_4c88e5f596d2adee1e269c9ba0f7b51f208b17eaad505d125025d0b346e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array("set" => 21);
+        $tags = array("for" => 25);
         $filters = array();
         $functions = array();
 
         try {
             $this->env->getExtension('Twig_Extension_Sandbox')->checkSecurity(
-                array('set'),
+                array('for'),
                 array(),
                 array()
             );
@@ -39,28 +39,28 @@ class __TwigTemplate_4c88e5f596d2adee1e269c9ba0f7b51f208b17eaad505d125025d0b346e
             throw $e;
         }
 
-        // line 21
-        $context["classes"] = array(0 => "filter-guidelines-item", 1 => ("filter-guidelines-" . $this->getAttribute(        // line 23
-($context["format"] ?? null), "id", array())));
-        // line 26
-        echo "<div";
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute(($context["attributes"] ?? null), "addClass", array(0 => ($context["classes"] ?? null)), "method"), "html", null, true));
-        echo ">
-  <h4 class=\"label\">";
-        // line 27
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute(($context["format"] ?? null), "label", array()), "html", null, true));
-        echo "</h4>
-  ";
+        // line 24
+        echo "<span";
+        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["attributes"] ?? null), "html", null, true));
+        echo ">";
+        // line 25
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["items"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 26
+            echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["item"], "content", array()), "html", null, true));
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
         // line 28
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["tips"] ?? null), "html", null, true));
-        echo "
-</div>
+        echo "</span>
 ";
     }
 
     public function getTemplateName()
     {
-        return "core/themes/classy/templates/content-edit/filter-guidelines.html.twig";
+        return "core/modules/node/templates/field--node--uid.html.twig";
     }
 
     public function isTraitable()
@@ -70,7 +70,7 @@ class __TwigTemplate_4c88e5f596d2adee1e269c9ba0f7b51f208b17eaad505d125025d0b346e
 
     public function getDebugInfo()
     {
-        return array (  55 => 28,  51 => 27,  46 => 26,  44 => 23,  43 => 21,);
+        return array (  57 => 28,  51 => 26,  47 => 25,  43 => 24,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -83,6 +83,6 @@ class __TwigTemplate_4c88e5f596d2adee1e269c9ba0f7b51f208b17eaad505d125025d0b346e
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "core/themes/classy/templates/content-edit/filter-guidelines.html.twig", "/Users/al/sites/gbc/web/core/themes/classy/templates/content-edit/filter-guidelines.html.twig");
+        return new Twig_Source("", "core/modules/node/templates/field--node--uid.html.twig", "/Users/al/sites/gbc/web/core/modules/node/templates/field--node--uid.html.twig");
     }
 }

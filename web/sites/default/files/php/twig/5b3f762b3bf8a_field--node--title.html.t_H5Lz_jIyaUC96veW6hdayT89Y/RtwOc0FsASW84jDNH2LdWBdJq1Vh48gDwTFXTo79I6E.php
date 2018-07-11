@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/classy/templates/form/radios.html.twig */
-class __TwigTemplate_484566c3762b04839b782d5b39e5141bf96771809dc92c0c072c9b35a9cdb89f extends Twig_Template
+/* core/modules/node/templates/field--node--title.html.twig */
+class __TwigTemplate_eb2b6eb8214c1ceaccdad09237cd6456a446d0f60a8a56807863502e4a23e513 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -15,13 +15,13 @@ class __TwigTemplate_484566c3762b04839b782d5b39e5141bf96771809dc92c0c072c9b35a9c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array();
+        $tags = array("for" => 25);
         $filters = array();
         $functions = array();
 
         try {
             $this->env->getExtension('Twig_Extension_Sandbox')->checkSecurity(
-                array(),
+                array('for'),
                 array(),
                 array()
             );
@@ -39,18 +39,28 @@ class __TwigTemplate_484566c3762b04839b782d5b39e5141bf96771809dc92c0c072c9b35a9c
             throw $e;
         }
 
-        // line 13
-        echo "<div";
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute(($context["attributes"] ?? null), "addClass", array(0 => "form-radios"), "method"), "html", null, true));
+        // line 24
+        echo "<span";
+        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["attributes"] ?? null), "html", null, true));
         echo ">";
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["children"] ?? null), "html", null, true));
-        echo "</div>
+        // line 25
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["items"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 26
+            echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["item"], "content", array()), "html", null, true));
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 28
+        echo "</span>
 ";
     }
 
     public function getTemplateName()
     {
-        return "core/themes/classy/templates/form/radios.html.twig";
+        return "core/modules/node/templates/field--node--title.html.twig";
     }
 
     public function isTraitable()
@@ -60,7 +70,7 @@ class __TwigTemplate_484566c3762b04839b782d5b39e5141bf96771809dc92c0c072c9b35a9c
 
     public function getDebugInfo()
     {
-        return array (  43 => 13,);
+        return array (  57 => 28,  51 => 26,  47 => 25,  43 => 24,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -73,6 +83,6 @@ class __TwigTemplate_484566c3762b04839b782d5b39e5141bf96771809dc92c0c072c9b35a9c
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "core/themes/classy/templates/form/radios.html.twig", "/Users/al/sites/gbc/web/core/themes/classy/templates/form/radios.html.twig");
+        return new Twig_Source("", "core/modules/node/templates/field--node--title.html.twig", "/Users/al/sites/gbc/web/core/modules/node/templates/field--node--title.html.twig");
     }
 }

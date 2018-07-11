@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/classy/templates/navigation/vertical-tabs.html.twig */
-class __TwigTemplate_17de58add493bea9451c19385f1af79c69db195237759f08516bdba08ca7bd5a extends Twig_Template
+/* core/modules/node/templates/field--node--created.html.twig */
+class __TwigTemplate_0dc132f734d3e9af6f8947a7d78cdc5250defa30f4849f771185f264ec70d9e2 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -15,13 +15,13 @@ class __TwigTemplate_17de58add493bea9451c19385f1af79c69db195237759f08516bdba08ca
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array();
+        $tags = array("for" => 25);
         $filters = array();
         $functions = array();
 
         try {
             $this->env->getExtension('Twig_Extension_Sandbox')->checkSecurity(
-                array(),
+                array('for'),
                 array(),
                 array()
             );
@@ -39,18 +39,28 @@ class __TwigTemplate_17de58add493bea9451c19385f1af79c69db195237759f08516bdba08ca
             throw $e;
         }
 
-        // line 13
-        echo "<div";
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute(($context["attributes"] ?? null), "setAttribute", array(0 => "data-vertical-tabs-panes", 1 => true), "method"), "html", null, true));
+        // line 24
+        echo "<span";
+        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["attributes"] ?? null), "html", null, true));
         echo ">";
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["children"] ?? null), "html", null, true));
-        echo "</div>
+        // line 25
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["items"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 26
+            echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["item"], "content", array()), "html", null, true));
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 28
+        echo "</span>
 ";
     }
 
     public function getTemplateName()
     {
-        return "core/themes/classy/templates/navigation/vertical-tabs.html.twig";
+        return "core/modules/node/templates/field--node--created.html.twig";
     }
 
     public function isTraitable()
@@ -60,7 +70,7 @@ class __TwigTemplate_17de58add493bea9451c19385f1af79c69db195237759f08516bdba08ca
 
     public function getDebugInfo()
     {
-        return array (  43 => 13,);
+        return array (  57 => 28,  51 => 26,  47 => 25,  43 => 24,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -73,6 +83,6 @@ class __TwigTemplate_17de58add493bea9451c19385f1af79c69db195237759f08516bdba08ca
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "core/themes/classy/templates/navigation/vertical-tabs.html.twig", "/Users/al/sites/gbc/web/core/themes/classy/templates/navigation/vertical-tabs.html.twig");
+        return new Twig_Source("", "core/modules/node/templates/field--node--created.html.twig", "/Users/al/sites/gbc/web/core/modules/node/templates/field--node--created.html.twig");
     }
 }

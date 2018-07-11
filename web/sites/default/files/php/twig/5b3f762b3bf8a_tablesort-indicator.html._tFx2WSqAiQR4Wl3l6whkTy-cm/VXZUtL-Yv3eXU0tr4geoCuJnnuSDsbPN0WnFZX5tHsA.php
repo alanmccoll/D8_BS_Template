@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/classy/templates/content-edit/file-managed-file.html.twig */
-class __TwigTemplate_105fe7a51646ef9582a496d553c5ad4a19532b99ed12d991d808f76dbaa06a2a extends Twig_Template
+/* core/themes/stable/templates/admin/tablesort-indicator.html.twig */
+class __TwigTemplate_f65ae35c1af23f676dc191f1f7bad9b2f59dd749ba0cc7a346757c4e7b7a7be1 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -15,15 +15,15 @@ class __TwigTemplate_105fe7a51646ef9582a496d553c5ad4a19532b99ed12d991d808f76dbaa
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array("set" => 15);
-        $filters = array();
-        $functions = array("attach_library" => 13);
+        $tags = array("set" => 11, "if" => 18);
+        $filters = array("t" => 19);
+        $functions = array();
 
         try {
             $this->env->getExtension('Twig_Extension_Sandbox')->checkSecurity(
-                array('set'),
-                array(),
-                array('attach_library')
+                array('set', 'if'),
+                array('t'),
+                array()
             );
         } catch (Twig_Sandbox_SecurityError $e) {
             $e->setSourceContext($this->getSourceContext());
@@ -39,27 +39,36 @@ class __TwigTemplate_105fe7a51646ef9582a496d553c5ad4a19532b99ed12d991d808f76dbaa
             throw $e;
         }
 
-        // line 13
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->env->getExtension('Drupal\Core\Template\TwigExtension')->attachLibrary("classy/file"), "html", null, true));
-        echo "
-";
-        // line 15
-        $context["classes"] = array(0 => "js-form-managed-file", 1 => "form-managed-file");
-        // line 20
-        echo "<div";
+        // line 11
+        $context["classes"] = array(0 => "tablesort", 1 => ("tablesort--" .         // line 13
+($context["style"] ?? null)));
+        // line 16
+        echo "<span";
         echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute(($context["attributes"] ?? null), "addClass", array(0 => ($context["classes"] ?? null)), "method"), "html", null, true));
         echo ">
-  ";
-        // line 21
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["element"] ?? null), "html", null, true));
-        echo "
-</div>
+  <span class=\"visually-hidden\">
+    ";
+        // line 18
+        if ((($context["style"] ?? null) == "asc")) {
+            // line 19
+            echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->renderVar(t("Sort ascending")));
+            echo "
+    ";
+        } else {
+            // line 21
+            echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->renderVar(t("Sort descending")));
+            echo "
+    ";
+        }
+        // line 23
+        echo "  </span>
+</span>
 ";
     }
 
     public function getTemplateName()
     {
-        return "core/themes/classy/templates/content-edit/file-managed-file.html.twig";
+        return "core/themes/stable/templates/admin/tablesort-indicator.html.twig";
     }
 
     public function isTraitable()
@@ -69,7 +78,7 @@ class __TwigTemplate_105fe7a51646ef9582a496d553c5ad4a19532b99ed12d991d808f76dbaa
 
     public function getDebugInfo()
     {
-        return array (  54 => 21,  49 => 20,  47 => 15,  43 => 13,);
+        return array (  64 => 23,  59 => 21,  54 => 19,  52 => 18,  46 => 16,  44 => 13,  43 => 11,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -82,6 +91,6 @@ class __TwigTemplate_105fe7a51646ef9582a496d553c5ad4a19532b99ed12d991d808f76dbaa
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "core/themes/classy/templates/content-edit/file-managed-file.html.twig", "/Users/al/sites/gbc/web/core/themes/classy/templates/content-edit/file-managed-file.html.twig");
+        return new Twig_Source("", "core/themes/stable/templates/admin/tablesort-indicator.html.twig", "/Users/al/sites/gbc/web/core/themes/stable/templates/admin/tablesort-indicator.html.twig");
     }
 }
