@@ -1,1 +1,1 @@
-# gbc_new
+# D8 bootstrap w/ subtheme based on GBC website
