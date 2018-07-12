@@ -1,7 +1,7 @@
 <?php
 
-/* core/modules/node/templates/field--node--created.html.twig */
-class __TwigTemplate_0dc132f734d3e9af6f8947a7d78cdc5250defa30f4849f771185f264ec70d9e2 extends Twig_Template
+/* core/themes/stable/templates/admin/indentation.html.twig */
+class __TwigTemplate_9d36347d0f3b5063a2198dd403876d73dff6646f6c71ab3e1144adfe4784104f extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -15,15 +15,15 @@ class __TwigTemplate_0dc132f734d3e9af6f8947a7d78cdc5250defa30f4849f771185f264ec7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array("for" => 25);
+        $tags = array("for" => 12);
         $filters = array();
-        $functions = array();
+        $functions = array("range" => 12);
 
         try {
             $this->env->getExtension('Twig_Extension_Sandbox')->checkSecurity(
                 array('for'),
                 array(),
-                array()
+                array('range')
             );
         } catch (Twig_Sandbox_SecurityError $e) {
             $e->setSourceContext($this->getSourceContext());
@@ -39,28 +39,22 @@ class __TwigTemplate_0dc132f734d3e9af6f8947a7d78cdc5250defa30f4849f771185f264ec7
             throw $e;
         }
 
-        // line 24
-        echo "<span";
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["attributes"] ?? null), "html", null, true));
-        echo ">";
-        // line 25
+        // line 12
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["items"] ?? null));
-        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 26
-            echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["item"], "content", array()), "html", null, true));
+        $context['_seq'] = twig_ensure_traversable(range(1, ($context["size"] ?? null)));
+        foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
+            if ((($context["size"] ?? null) > 0)) {
+                echo "<div class=\"js-indentation indentation\">&nbsp;</div>";
+            }
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 28
-        echo "</span>
-";
     }
 
     public function getTemplateName()
     {
-        return "core/modules/node/templates/field--node--created.html.twig";
+        return "core/themes/stable/templates/admin/indentation.html.twig";
     }
 
     public function isTraitable()
@@ -70,7 +64,7 @@ class __TwigTemplate_0dc132f734d3e9af6f8947a7d78cdc5250defa30f4849f771185f264ec7
 
     public function getDebugInfo()
     {
-        return array (  57 => 28,  51 => 26,  47 => 25,  43 => 24,);
+        return array (  43 => 12,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -83,6 +77,6 @@ class __TwigTemplate_0dc132f734d3e9af6f8947a7d78cdc5250defa30f4849f771185f264ec7
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "core/modules/node/templates/field--node--created.html.twig", "/Users/al/sites/gbc/web/core/modules/node/templates/field--node--created.html.twig");
+        return new Twig_Source("", "core/themes/stable/templates/admin/indentation.html.twig", "/Users/al/sites/gbc/web/core/themes/stable/templates/admin/indentation.html.twig");
     }
 }

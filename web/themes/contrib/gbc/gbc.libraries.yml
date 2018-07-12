@@ -2,6 +2,10 @@ framework:
   css:
     theme:
       css/gbc.css: {}
+  fonts:
+    css:
+      theme:
+        '//https://fonts.googleapis.com/css?family=Raleway|Roboto': { type: external }
   js:
     bootstrap/javascripts/bootstrap/affix.js: {}
     bootstrap/javascripts/bootstrap/alert.js: {}
